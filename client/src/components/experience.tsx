@@ -3,50 +3,57 @@ import { Check } from 'lucide-react';
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 bg-surface-elevated">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
-          Professional Experience
+    <section id="experience" className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold mb-12 text-gray-900">
+          Experience
         </h2>
         
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-tech-primary to-tech-secondary rounded-full"></div>
-          
-          {/* Timeline items */}
-          <div className="space-y-16">
-            {resumeData.experience.map((exp, index) => (
-              <div key={exp.id} className="relative flex items-center">
-                <div className={`absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 rounded-full border-4 border-white shadow-tech ${
-                  exp.current ? 'bg-tech-primary' : 
-                  index === 1 ? 'bg-tech-secondary' : 
-                  index === 2 ? 'bg-tech-accent' : 'bg-gray-500'
-                }`}></div>
-                
-                <div className={`ml-20 md:ml-0 ${
-                  index % 2 === 0 ? 'md:w-1/2 md:pr-8' : 'md:w-1/2 md:pl-8 md:ml-auto'
-                }`}>
-                  <div className="bg-surface-card p-8 rounded-xl shadow-tech hover:shadow-tech-lg transition-all duration-300 border border-gray-100">
-                    <div className="flex items-center justify-between mb-6">
-                      <h3 className="text-2xl font-bold text-gray-900">{exp.title}</h3>
-                      <span className="text-sm text-tech-primary font-semibold bg-tech-primary/10 px-3 py-1 rounded-full">{exp.period}</span>
-                    </div>
-                    
-                    <p className="text-muted mb-6 text-lg font-medium">{exp.department} | {exp.company}</p>
-                    
-                    <ul className="space-y-3 text-gray-700">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start">
-                          <Check className="text-tech-accent mt-1 mr-3 h-5 w-5 flex-shrink-0" />
-                          <span className="leading-relaxed">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        <div className="space-y-8">
+          {resumeData.experience.map((exp, index) => (
+            <div key={exp.id} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{exp.company}</h3>
+                  <p className="text-lg text-gray-700">{exp.title}</p>
                 </div>
+                <span className="text-sm text-gray-600 mt-2 md:mt-0">{exp.period}</span>
               </div>
-            ))}
-          </div>
+              
+              <p className="text-gray-600 mb-4">{exp.department}</p>
+              
+              <div className="text-gray-700 leading-relaxed">
+                {exp.achievements.map((achievement, i) => (
+                  <p key={i} className="mb-2">
+                    {achievement}
+                  </p>
+                ))}
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mt-4">
+                {index === 0 && ['LLM', 'RAG', 'Personalization', 'Entity Extraction'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 bg-tech-primary text-white rounded text-sm">
+                    {tech}
+                  </span>
+                ))}
+                {index === 1 && ['Reinforcement Learning', 'Thompson Sampling', 'Real-time ML', 'Computer Vision'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 bg-tech-primary text-white rounded text-sm">
+                    {tech}
+                  </span>
+                ))}
+                {index === 2 && ['Anomaly Detection', 'Forecasting', 'Real-time Systems', 'Cache Optimization'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 bg-tech-primary text-white rounded text-sm">
+                    {tech}
+                  </span>
+                ))}
+                {index === 3 && ['Time Series', 'ARIMA', 'A/B Testing', 'ETA Prediction'].map((tech) => (
+                  <span key={tech} className="px-3 py-1 bg-tech-primary text-white rounded text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
