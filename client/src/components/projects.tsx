@@ -64,15 +64,6 @@ export function Projects() {
             </div>
           ))}
         </div>
-        
-        <div className="mt-12 text-center">
-          <Button 
-            variant="outline"
-            className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors button-hover"
-          >
-            View My Resume
-          </Button>
-        </div>
       </div>
     </section>
   );
