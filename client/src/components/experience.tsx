@@ -22,9 +22,9 @@ export function Experience() {
                 <span className="text-sm text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-900/30 px-3 py-1 rounded-full mt-2 md:mt-0">{exp.period}</span>
               </div>
               
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{exp.department}</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{exp.department}</p>
               
-              <div className="text-gray-700 leading-relaxed">
+              <div className="text-gray-700 dark:text-gray-200 leading-relaxed">
                 {exp.achievements.map((achievement, i) => (
                   <p key={i} className="mb-2">
                     {achievement}
@@ -34,7 +34,7 @@ export function Experience() {
               
               <div className="flex flex-wrap gap-2 mt-4">
                 {index === 0 && ['LLM', 'RAG', 'Personalization', 'Entity Extraction'].map((tech) => (
-                  <span key={tech} className="px-3 py-1 bg-tech-primary text-white rounded text-sm">
+                  <span key={tech} className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-sm shadow-sm hover:shadow-md transition-all duration-300">
                     {tech}
                   </span>
                 ))}
