@@ -35,9 +35,9 @@ const iconMap = {
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 bg-white">
+    <section id="projects" className="py-20 bg-surface-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
           Key Projects
         </h2>
         
@@ -46,21 +46,23 @@ export function Projects() {
             const IconComponent = iconMap[project.icon as keyof typeof iconMap];
             
             return (
-              <div key={project.id} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-4">
-                  <IconComponent className="text-tech-blue text-2xl mr-3" />
-                  <h3 className="text-xl font-bold">{project.title}</h3>
+              <div key={project.id} className="bg-surface-elevated rounded-xl p-8 hover:shadow-tech-lg transition-all duration-300 border border-gray-100 group">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-tech-primary/10 rounded-lg mr-4 group-hover:bg-tech-primary/20 transition-colors duration-300">
+                    <IconComponent className="text-tech-primary text-2xl" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
                 </div>
                 
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-700 mb-6 leading-relaxed">{project.description}</p>
                 
-                <div className="space-y-2 mb-4">
+                <div className="space-y-3 mb-6">
                   {project.metrics.map((metric, i) => {
                     const MetricIcon = iconMap[metric.icon as keyof typeof iconMap];
                     return (
                       <div key={i} className="flex items-center text-sm text-gray-700">
-                        <MetricIcon className="text-tech-blue mr-2 h-4 w-4" />
-                        <span>{metric.label}</span>
+                        <MetricIcon className="text-tech-accent mr-3 h-4 w-4" />
+                        <span className="font-medium">{metric.label}</span>
                       </div>
                     );
                   })}
@@ -70,7 +72,7 @@ export function Projects() {
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-2 py-1 bg-tech-blue/10 text-tech-blue rounded text-xs"
+                      className="px-3 py-1 bg-tech-primary/10 text-tech-primary rounded-full text-sm font-medium hover:bg-tech-primary/20 transition-colors duration-200"
                     >
                       {tech}
                     </span>

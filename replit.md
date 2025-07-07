@@ -98,8 +98,19 @@ This is a modern, responsive resume portfolio website built for Raj Swarnim, a T
 - **Database Migrations**: Drizzle Kit for schema management
 
 ## Changelog
-- July 07, 2025. Initial setup
+- July 07, 2025. Initial setup  
+- July 07, 2025. Enhanced visual design with modern color palette and improved UI components
+
+## Recent Changes
+- Implemented modern gradient color scheme (blue to purple primary gradient)
+- Updated all components with enhanced shadows, rounded corners, and better spacing
+- Improved typography with larger headings and better contrast
+- Added hover effects and smooth transitions throughout
+- Enhanced card designs with elevated surfaces and subtle borders
+- Updated navigation with active state highlighting
+- Refined hero section with larger profile image and better button styling
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preferences: Modern, professional look with good color contrast and visual hierarchy.

@@ -9,7 +9,7 @@ export function Stats() {
   });
 
   return (
-    <section ref={elementRef} className="py-16 bg-white">
+    <section ref={elementRef} className="py-20 bg-surface-elevated">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {resumeData.stats.map((stat, index) => (
@@ -36,11 +36,11 @@ function StatCard({ value, label, suffix, startAnimation }: StatCardProps) {
   const count = useCounter(value, 2000, startAnimation);
 
   return (
-    <div className="text-center">
-      <div className="text-3xl md:text-4xl font-bold text-tech-blue mb-2">
+    <div className="text-center group">
+      <div className="text-4xl md:text-5xl font-bold text-tech-primary mb-3 group-hover:text-tech-secondary transition-colors duration-300">
         {count}{suffix}
       </div>
-      <div className="text-gray-600 font-medium">{label}</div>
+      <div className="text-muted font-medium text-lg">{label}</div>
     </div>
   );
 }

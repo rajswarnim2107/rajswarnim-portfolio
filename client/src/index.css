@@ -24,10 +24,17 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* Custom tech colors */
-  --tech-blue: hsl(207, 90%, 54%);
-  --tech-blue-dark: hsl(207, 90%, 44%);
-  --tech-blue-light: hsl(207, 90%, 64%);
+  /* Custom tech colors - Modern gradient palette */
+  --tech-primary: hsl(221, 83%, 53%);
+  --tech-primary-dark: hsl(221, 83%, 43%);
+  --tech-primary-light: hsl(221, 83%, 63%);
+  --tech-secondary: hsl(262, 83%, 58%);
+  --tech-accent: hsl(142, 76%, 36%);
+  --tech-gradient-start: hsl(221, 83%, 53%);
+  --tech-gradient-end: hsl(262, 83%, 58%);
+  --surface-elevated: hsl(0, 0%, 98%);
+  --surface-card: hsl(0, 0%, 100%);
+  --text-muted: hsl(215, 16%, 47%);
 }
 
 .dark {
@@ -65,32 +72,72 @@
 }
 
 @layer utilities {
-  .text-tech-blue {
-    color: var(--tech-blue);
+  .text-tech-primary {
+    color: var(--tech-primary);
   }
   
-  .text-tech-blue-dark {
-    color: var(--tech-blue-dark);
+  .text-tech-primary-dark {
+    color: var(--tech-primary-dark);
   }
   
-  .text-tech-blue-light {
-    color: var(--tech-blue-light);
+  .text-tech-secondary {
+    color: var(--tech-secondary);
   }
   
-  .bg-tech-blue {
-    background-color: var(--tech-blue);
+  .text-tech-accent {
+    color: var(--tech-accent);
   }
   
-  .bg-tech-blue-dark {
-    background-color: var(--tech-blue-dark);
+  .text-muted {
+    color: var(--text-muted);
   }
   
-  .bg-tech-blue-light {
-    background-color: var(--tech-blue-light);
+  .bg-tech-primary {
+    background-color: var(--tech-primary);
   }
   
-  .border-tech-blue {
-    border-color: var(--tech-blue);
+  .bg-tech-primary-dark {
+    background-color: var(--tech-primary-dark);
+  }
+  
+  .bg-tech-secondary {
+    background-color: var(--tech-secondary);
+  }
+  
+  .bg-tech-accent {
+    background-color: var(--tech-accent);
+  }
+  
+  .bg-surface-elevated {
+    background-color: var(--surface-elevated);
+  }
+  
+  .bg-surface-card {
+    background-color: var(--surface-card);
+  }
+  
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--tech-gradient-start), var(--tech-gradient-end));
+  }
+  
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, var(--tech-primary), var(--tech-accent));
+  }
+  
+  .border-tech-primary {
+    border-color: var(--tech-primary);
+  }
+  
+  .border-tech-secondary {
+    border-color: var(--tech-secondary);
+  }
+  
+  .shadow-tech {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 4px 6px -2px rgba(59, 130, 246, 0.05);
+  }
+  
+  .shadow-tech-lg {
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
   }
   
   .animate-fade-in {

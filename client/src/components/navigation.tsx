@@ -45,11 +45,11 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-tech border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-tech-blue">Raj Swarnim</span>
+            <span className="text-xl font-bold text-tech-primary">Raj Swarnim</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -61,8 +61,8 @@ export function Navigation() {
                   onClick={() => scrollToSection(item.href)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeSection === item.href.substring(1)
-                      ? 'text-tech-blue'
-                      : 'text-gray-700 hover:text-tech-blue'
+                      ? 'text-tech-primary bg-tech-primary/10'
+                      : 'text-gray-700 hover:text-tech-primary'
                   }`}
                 >
                   {item.label}
@@ -77,7 +77,7 @@ export function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-tech-blue"
+              className="text-gray-700 hover:text-tech-primary"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -95,8 +95,8 @@ export function Navigation() {
                 onClick={() => scrollToSection(item.href)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   activeSection === item.href.substring(1)
-                    ? 'text-tech-blue bg-tech-blue/10'
-                    : 'text-gray-700 hover:text-tech-blue hover:bg-gray-50'
+                    ? 'text-tech-primary bg-tech-primary/10'
+                    : 'text-gray-700 hover:text-tech-primary hover:bg-gray-50'
                 }`}
               >
                 {item.label}
