@@ -34,7 +34,7 @@ export function Experience() {
               
               <div className="flex flex-wrap gap-2 mt-4">
                 {index === 0 && ['LLM', 'RAG', 'Personalization', 'Entity Extraction'].map((tech) => (
-                  <span key={tech} className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-sm shadow-sm hover:shadow-md transition-all duration-300">
+                  <span key={tech} className="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full text-sm shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                     {tech}
                   </span>
                 ))}
