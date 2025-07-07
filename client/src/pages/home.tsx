@@ -6,6 +6,7 @@ import { Projects } from '@/components/projects';
 import { Skills } from '@/components/skills';
 import { Education } from '@/components/education';
 import { Awards } from '@/components/awards';
+import { GitHubStats } from '@/components/github-stats';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Skills />
       <Education />
       <Awards />
+      <GitHubStats />
       <Contact />
       <Footer />
     </div>
