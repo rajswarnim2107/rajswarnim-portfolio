@@ -1,0 +1,189 @@
+Raj Swarnim
+Technical Architect - AI Research, ixigo, India
+Contact No.: +91-8820218074
+E-mail: rajswarnim2107@gmail.com
+LinkedIn: Raj Swarnim - ixigo | LinkedIn
+
+
+SYNOPSIS
+
+Seasoned AI/ML Engineer with 8 years of experience in Applied AI Research & Data Science
+Deep analytical expertise in designing and implementing AI/ML algorithms, including LLM-based applications
+Managed and led multi-level initiatives in Personalization, Ranking, Recommendation, Chatbots and others
+Built and scaled cross-functional AI teams and end-to-end processes from the ground up at ixigo
+Partnered with stakeholders across product, engineering, growth, and business to align ML strategy with organizational goals
+PROFESSIONAL EXPERIENCE
+
+Organization:
+ixigo  (Le Travenues Technology Ltd.)
+Apr’25 - Present
+Designation:
+Technical Architect - AI Research	   Business Unit:
+AI Products (R&D)
+
+
+Entity Aware
+ Query Retrieval
+ (Hotel Search)
+Designed and implemented a search with modular query-resolution pipeline that extracts key entities and dynamically switches between entity-first parsing and LLM-powered hybrid search
+Led a full overhaul of the hotel search architecture to improve precision and relevancy for complex, multi-entity queries, serving 500k users daily
+Focused on surfacing the right properties for users, even when queries were overly complex
+
+
+Multi-modal RAG
+ for CX agents 
+Designed and implemented an assistive CX bot (using RAG) trained over thousands of SOPs 
+Performed context engineering from direct sources, for relevant answers to a customer
+Developed a robust SOP ingestion pipeline building a complete knowledge base
+Boosted response accuracy from 55% to 66% and cut chat resolution time from 17 min to ~6 min
+
+
+Personalisation & Recommendation (Hotels)
+Led a cross-sell recommendation engine using user segmentation to deliver personalized hotel suggestions
+Also, a Similar-Hotel Recommender with weighted clustering and affinity propagation, surfacing alternatives based on location, amenities, and reviews.
+Integrated segment-aware targeting to drive cross-sell offers, lifting hotel bookings by 7% and adding ₹100K+ in monthly revenue
+
+
+Organization:
+ixigo  (Le Travenues Technology Ltd.)
+Apr’21 - Mar’25
+Designation:
+Principal Research Engineer (AI)	  Business Unit:
+Research & Data Science
+
+
+RL-Based Hotel Ranking & Relevance
+Built an RL-based hotel-ranking algorithm with Thompson Sampling for segment-aware personalization serving 5M users daily 
+Designed a realtime feedback pipeline (clicks, dwell-time, bookings) to continuously refine ranking policies on the fly
+Delivered a 24% uplift in booking conversions and improved recommendation relevance via dynamic, feedback-driven personalization
+
+Classification - (Trains PNR Confirmation Prediction)
+Engineered an end to end ML-driven trains PNR confirmation service, serving 50 M+ daily requests with proper alerting monitoring with <30 ms latency per request.
+Built an end-to-end pipeline ingesting 1 B+ datapoints across 250+ features, optimizing memory usage for scalable training and inference
+Delivered a 7% lift in waitlist conversion and boosted user trust with real-time, accurate probability predictions.
+
+Multimodal 
+AI-Conversational Travel Agent
+
+
+Led development of a GPU-accelerated pipeline for a video-based AI agent, delivering deep-fake avatars with sub-2 s response times at scale
+Integrated ControlNet diffusion models for facial movements, Wav2Lip for lip sync, GAN-based face restoration, and ElevenLabs TTS for lifelike interactions
+Significantly boosted user engagement by enabling the chatbot to “speak” via video
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Organization:
+ixigo  (Le Travenues Technology Ltd.)
+Apr’19 - Mar’21
+Designation:
+Senior Research Engineer (AI)	 Business Unit:
+Research & Data Science
+
+Product Observability & Anomaly Detection Platform
+Designed and developed a near-real-time observability/anomaly detection system monitoring 10K+ daily business and technical metrics to detect outages.
+Led a cross-functional team to implement forecasting-based anomaly detection with injection validation, achieving ~94% detection accuracy and low false positives.
+Slashed incident triage TAT from days to minutes, mitigating downtime risks and safeguarding business continuity.
+
+
+Real Time Flight Search Cache Predictor
+Build a dynamic cache for Flights for better cache utilisation and to reduce price change 
+Contributed in building a streaming pipeline to ingest millions of flight searches and preemptively populate cache with LookAhead, ensuring fresh, relevant pricing.
+Applied parametric survival models to forecast user search behavior, boosting cache utilization by 32–35% and cutting P95 latency from 4 s to <1 s
+Drove ~2.2 k incremental daily bookings and over ₹1 MM in daily margin uplift through timely, data-driven cache refreshes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Organization:
+ixigo  (Le Travenues Technology Ltd.)
+Jan’18 - Mar’19
+Designation:
+Software Engineer (AI)	Business Unit:
+Research & Data Science
+
+Forecasting 
+ETA Prediction (Trains)
+Built an online forecasting pipeline for ~7 k trains using classical time-series models (ARIMA, Exponential Smoothing) to predict station arrival delays.
+Used an A/B testing framework to benchmark model performance, cutting P95 RMSE from 17 min to 9 min and MAE from 9 min to 4 min
+Deployed the service for real-time inference, ensuring low-latency, high-accuracy ETA updates
+
+
+
+
+
+
+
+
+RESEARCH & PUBLICATIONS 
+
+AI-Stack (IIT Hyderabad), Under Prof. Dr. Srijith P.K							(Jul 2024 - Jun 2025)                                                                                                                                                                        
+(Under Initiative of Project AiSwARYAM, AI Center of Excellence, IIT Hyderabad), 
+Built AI Stack, a modular cloud-native AutoML platform for end-to-end ML workflows.
+Leveraged Docker Swarm orchestration, GPU acceleration, and distributed storage for scalable model training.
+Added comprehensive monitoring and build for horizontal scalability, fault tolerance, and zero-downtime deployments.
+
+Application of twitter in Health care sector for India  							(Sep 2015 - Mar 2016)                                                                                                                                                                        
+(IEEE International Conference on Recent Advances in Information Technology), 
+[Presenter For <DOI - 10.1109/RAIT.2016.7507896, RAIT-2016, IIT DHANBAD]                                                      
+Used NLP techniques like TF-IDF, stemming, word cloud visualisations to extract relevant information from tweets
+Extracted top causes of death from healthcare related handles and govt. run health campaigns like Mission Indra Dhanush
+
+INTERNSHIPS
+
+Data Science Intern, ixigo
+Bid Predictor for Ads & Data Analytics (Reporting):
+Research Intern, Calcutta University, Under Prof. Dr. Amlan Chakraborty, Dean, CU (IT)
+	Lung Nodule Risk Prediction : Predicted the probability of malignancy of lung nodules from CT images
+
+EDUCATION
+
+M.Tech in Data Sciences in Computer Science & Engineering  				 		(Jul 2022 - Apr 2024)  
+	Indian Institute of Technology, Hyderabad, CGPA - 9.06
+B.Tech in Computer Science & Engineering  				 				(Jun 2013 - Jun 2017)  
+	Institute of Engineering & Technology, Kolkata, CGPA - 8.85
+Higher Secondary (Science)   				 					(Apr 2011 - May 2013)  
+	Narayana Junior College (AP Board), Hyderabad, Marks - 91.1%								
+Matriculation   				 							(Apr 2010 - Mar 2011)  
+	Delhi Public School, Bokaro Steel City, CGPA - 10
+
+TECHNICAL SKILLS
+
+Programming (Python, R, SQL, Shell); ML & DL (supervised, unsupervised, RL, time-series); Generative AI & LLMOps (LLMs, RAG, voice agents); Architecture & MLOps (cloud-native, microservices, Docker, Kubernetes, CI/CD, MLflow, Prefect); Big Data & ETL (Spark, Dask, AWS); Visualization (Metabase, Superset); Frameworks (Pandas, NumPy, Scikit-Learn, PyTorch, Keras).
+
+LEADERSHIP & ACCOMPLISHMENTS
+
+ixigo ixi-Guru Award :  For Contributions in Engineering & AI-based Research Products and for mentoring & giving hand to everyone else who truly needs help in technology
+ixigo Premio Award :  Received Premio award 3 times for exemplary efforts in the field of Research and Data Science
+AI/ML Kaggle Hackathon Rank 1 @ IIT Hyderabad :  Predicting on time delivery of food based on different factors
+Cricket Championship (State level) : Secured First Position conducted by Bokaro District Cricket Association
