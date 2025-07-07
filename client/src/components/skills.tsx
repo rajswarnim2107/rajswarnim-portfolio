@@ -9,20 +9,23 @@ export function Skills() {
   });
 
   return (
-    <section id="skills" className="py-16 bg-gray-50">
+    <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-gray-900">
+        <h2 className="text-3xl font-bold mb-12 text-gray-900 dark:text-white slide-in-up">
           Skills
         </h2>
         
         <div ref={elementRef} className="grid md:grid-cols-2 gap-12">
-          {Object.entries(resumeData.skills).map(([category, skills]) => (
-            <div key={category} className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-6 text-gray-900">{category}</h3>
+          {Object.entries(resumeData.skills).map(([category, skills], index) => (
+            <div key={category} className={`bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 card-hover scroll-reveal transition-colors`}>
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">
+                <span className="ai-gradient-text-purple">{category}</span>
+              </h3>
               <div className="space-y-1">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="text-gray-700">
-                    • {skill.name}
+                  <div key={skill.name} className="text-gray-700 dark:text-gray-300 flex items-center">
+                    <span className="ai-gradient-text mr-2">•</span>
+                    {skill.name}
                   </div>
                 ))}
               </div>

@@ -100,15 +100,19 @@ This is a modern, responsive resume portfolio website built for Raj Swarnim, a T
 ## Changelog
 - July 07, 2025. Initial setup  
 - July 07, 2025. Enhanced visual design with modern color palette and improved UI components
+- July 07, 2025. Added AI-themed animations and dark/light mode toggle
 
 ## Recent Changes
-- Implemented modern gradient color scheme (blue to purple primary gradient)
-- Updated all components with enhanced shadows, rounded corners, and better spacing
-- Improved typography with larger headings and better contrast
-- Added hover effects and smooth transitions throughout
-- Enhanced card designs with elevated surfaces and subtle borders
-- Updated navigation with active state highlighting
-- Refined hero section with larger profile image and better button styling
+- Implemented comprehensive dark/light mode support with theme toggle
+- Added AI-themed gradient text animations inspired by modern developer portfolios
+- Created floating animations, pulse effects, and smooth slide-in transitions
+- Enhanced hero section with animated gradient text and floating profile image
+- Added scroll-reveal animations that trigger when elements come into view
+- Updated all components with dark mode variants and smooth color transitions
+- Implemented AI gradient text for names, titles, and key elements
+- Added button hover effects with shimmer animations
+- Created card hover animations with elevation effects
+- Consolidated ixigo experiences and enhanced project descriptions with detailed technical content
 
 ## User Preferences
 

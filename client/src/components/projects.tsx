@@ -36,24 +36,26 @@ const iconMap = {
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 bg-gray-50">
+    <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-gray-900">
+        <h2 className="text-3xl font-bold mb-12 text-gray-900 dark:text-white slide-in-up">
           Projects
         </h2>
         
         <div className="space-y-8">
-          {resumeData.projects.map((project) => (
-            <div key={project.id} className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+          {resumeData.projects.map((project, index) => (
+            <div key={project.id} className={`bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 card-hover scroll-reveal transition-colors`}>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                <span className="ai-gradient-text-purple">{project.title}</span>
+              </h3>
               
-              <p className="text-gray-700 mb-4 leading-relaxed">{project.description}</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
               
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <span 
                     key={tech}
-                    className="px-3 py-1 bg-tech-primary text-white rounded text-sm"
+                    className="px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded text-sm pulse-glow"
                   >
                     {tech}
                   </span>
