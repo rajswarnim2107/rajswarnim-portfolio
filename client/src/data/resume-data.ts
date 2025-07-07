@@ -28,54 +28,18 @@ export const resumeData = {
   
   experience: [
     {
-      id: "current",
+      id: "ixigo",
       title: "Technical Architect - AI Research",
       company: "ixigo (Le Travenues Technology Ltd.)",
       department: "AI Products (R&D)",
-      period: "Apr 2025 - Present",
+      period: "Jan 2018 - Present",
       current: true,
       achievements: [
-        "Designed Entity Aware Query Retrieval system serving 500K users daily",
-        "Implemented Multi-modal RAG for CX agents, boosting accuracy from 55% to 66%",
-        "Led personalization engine adding ₹100K+ monthly revenue"
-      ]
-    },
-    {
-      id: "principal",
-      title: "Principal Research Engineer (AI)",
-      company: "ixigo (Le Travenues Technology Ltd.)",
-      department: "Research & Data Science",
-      period: "Apr 2021 - Mar 2025",
-      current: false,
-      achievements: [
-        "Built RL-based hotel ranking serving 5M users, 24% booking uplift",
-        "Developed multimodal AI conversational agent with sub-2s response times",
-        "Engineered ML-driven PNR confirmation service for 50M+ daily requests"
-      ]
-    },
-    {
-      id: "senior",
-      title: "Senior Research Engineer (AI)",
-      company: "ixigo (Le Travenues Technology Ltd.)",
-      department: "Research & Data Science",
-      period: "Apr 2019 - Mar 2021",
-      current: false,
-      achievements: [
-        "Designed anomaly detection system monitoring 10K+ daily metrics",
-        "Built dynamic flight cache system, boosting utilization by 32-35%",
-        "Delivered ₹1MM daily margin uplift through intelligent caching"
-      ]
-    },
-    {
-      id: "engineer",
-      title: "Software Engineer (AI)",
-      company: "ixigo (Le Travenues Technology Ltd.)",
-      department: "Research & Data Science",
-      period: "Jan 2018 - Mar 2019",
-      current: false,
-      achievements: [
-        "Built ETA prediction pipeline for 7K trains using time-series models",
-        "Reduced P95 RMSE from 17 min to 9 min through A/B testing"
+        "Led AI/ML initiatives across multiple product lines serving 50M+ users daily with end-to-end ML systems",
+        "Built and scaled cross-functional AI teams and processes from the ground up, managing multi-level initiatives in Personalization, Ranking, Recommendation, and Chatbots",
+        "Partnered with stakeholders across product, engineering, growth, and business to align ML strategy with organizational goals",
+        "Designed and implemented AI/ML algorithms including LLM-based applications, reinforcement learning systems, and real-time prediction pipelines",
+        "Managed progression from Software Engineer to Technical Architect over 7+ years, demonstrating consistent technical leadership and innovation"
       ]
     }
   ],
@@ -83,69 +47,102 @@ export const resumeData = {
   projects: [
     {
       id: "query-retrieval",
-      title: "Entity Aware Query Retrieval",
-      description: "Modular search pipeline with dynamic entity extraction and LLM-powered hybrid search for hotel discovery.",
+      title: "Entity Aware Query Retrieval (Hotel Search)",
+      description: "Designed and implemented a search with modular query-resolution pipeline that extracts key entities and dynamically switches between entity-first parsing and LLM-powered hybrid search. Led a full overhaul of the hotel search architecture to improve precision and relevancy for complex, multi-entity queries, serving 500K users daily.",
       icon: "search",
       metrics: [
         { icon: "users", label: "500K daily users" },
         { icon: "chart-line", label: "Improved search precision & relevancy" }
       ],
-      technologies: ["LLM", "NLP", "Search"]
+      technologies: ["LLM", "NLP", "Entity Extraction", "Search"]
     },
     {
       id: "multimodal-rag",
-      title: "Multi-modal RAG for CX",
-      description: "Assistive customer service bot with RAG architecture trained on thousands of SOPs.",
+      title: "Multi-modal RAG for CX Agents",
+      description: "Designed and implemented an assistive CX bot (using RAG) trained over thousands of SOPs. Performed context engineering from direct sources, for relevant answers to a customer. Developed a robust SOP ingestion pipeline building a complete knowledge base. Boosted response accuracy from 55% to 66% and cut chat resolution time from 17 min to ~6 min.",
       icon: "robot",
       metrics: [
         { icon: "percentage", label: "55% → 66% accuracy improvement" },
         { icon: "clock", label: "17 min → 6 min resolution time" }
       ],
-      technologies: ["RAG", "LLM", "CX"]
+      technologies: ["RAG", "LLM", "Context Engineering", "Knowledge Base"]
+    },
+    {
+      id: "personalization-recommendation",
+      title: "Personalisation & Recommendation (Hotels)",
+      description: "Led a cross-sell recommendation engine using user segmentation to deliver personalized hotel suggestions. Also, a Similar-Hotel Recommender with weighted clustering and affinity propagation, surfacing alternatives based on location, amenities, and reviews. Integrated segment-aware targeting to drive cross-sell offers, lifting hotel bookings by 7% and adding ₹100K+ in monthly revenue.",
+      icon: "brain",
+      metrics: [
+        { icon: "users", label: "Personalized recommendations" },
+        { icon: "arrow-up", label: "7% booking uplift, ₹100K+ monthly revenue" }
+      ],
+      technologies: ["Clustering", "Affinity Propagation", "User Segmentation", "Recommendation"]
     },
     {
       id: "rl-ranking",
-      title: "RL-Based Hotel Ranking",
-      description: "Reinforcement learning algorithm with Thompson Sampling for personalized hotel recommendations.",
+      title: "RL-Based Hotel Ranking & Relevance",
+      description: "Built an RL-based hotel-ranking algorithm with Thompson Sampling for segment-aware personalization serving 5M users daily. Designed a realtime feedback pipeline (clicks, dwell-time, bookings) to continuously refine ranking policies on the fly. Delivered a 24% uplift in booking conversions and improved recommendation relevance via dynamic, feedback-driven personalization.",
       icon: "brain",
       metrics: [
         { icon: "users", label: "5M daily users" },
         { icon: "arrow-up", label: "24% booking conversion uplift" }
       ],
-      technologies: ["RL", "Personalization", "Ranking"]
+      technologies: ["Reinforcement Learning", "Thompson Sampling", "Real-time ML", "Personalization"]
+    },
+    {
+      id: "pnr-prediction",
+      title: "Classification - (Trains PNR Confirmation Prediction)",
+      description: "Engineered an end to end ML-driven trains PNR confirmation service, serving 50 M+ daily requests with proper alerting monitoring with <30 ms latency per request. Built an end-to-end pipeline ingesting 1 B+ datapoints across 250+ features, optimizing memory usage for scalable training and inference. Delivered a 7% lift in waitlist conversion and boosted user trust with real-time, accurate probability predictions.",
+      icon: "train",
+      metrics: [
+        { icon: "database", label: "50M+ daily requests, 1B+ datapoints" },
+        { icon: "tachometer-alt", label: "<30ms latency, 7% conversion lift" }
+      ],
+      technologies: ["Classification", "Real-time ML", "Feature Engineering", "Scale"]
     },
     {
       id: "ai-agent",
-      title: "AI Conversational Agent",
-      description: "GPU-accelerated video-based AI agent with deep-fake avatars and real-time lip sync.",
+      title: "Multimodal AI-Conversational Travel Agent",
+      description: "Led development of a GPU-accelerated pipeline for a video-based AI agent, delivering deep-fake avatars with sub-2 s response times at scale. Integrated ControlNet diffusion models for facial movements, Wav2Lip for lip sync, GAN-based face restoration, and ElevenLabs TTS for lifelike interactions. Significantly boosted user engagement by enabling the chatbot to 'speak' via video.",
       icon: "video",
       metrics: [
         { icon: "stopwatch", label: "Sub-2s response times" },
         { icon: "chart-line", label: "Boosted user engagement" }
       ],
-      technologies: ["Computer Vision", "GAN", "TTS"]
-    },
-    {
-      id: "pnr-prediction",
-      title: "PNR Confirmation Prediction",
-      description: "End-to-end ML pipeline for train PNR confirmation with real-time probability predictions.",
-      icon: "train",
-      metrics: [
-        { icon: "database", label: "50M+ daily requests" },
-        { icon: "tachometer-alt", label: "<30ms latency" }
-      ],
-      technologies: ["Classification", "Real-time", "Scale"]
+      technologies: ["Computer Vision", "ControlNet", "Wav2Lip", "GAN", "TTS"]
     },
     {
       id: "anomaly-detection",
-      title: "Anomaly Detection Platform",
-      description: "Real-time observability system monitoring 10K+ daily metrics with 94% detection accuracy.",
+      title: "Product Observability & Anomaly Detection Platform",
+      description: "Designed and developed a near-real-time observability/anomaly detection system monitoring 10K+ daily business and technical metrics to detect outages. Led a cross-functional team to implement forecasting-based anomaly detection with injection validation, achieving ~94% detection accuracy and low false positives. Slashed incident triage TAT from days to minutes, mitigating downtime risks and safeguarding business continuity.",
       icon: "chart-area",
       metrics: [
         { icon: "percentage", label: "94% detection accuracy" },
         { icon: "clock", label: "Days → Minutes triage time" }
       ],
-      technologies: ["Anomaly Detection", "Monitoring", "Real-time"]
+      technologies: ["Anomaly Detection", "Forecasting", "Real-time Systems", "Monitoring"]
+    },
+    {
+      id: "cache-predictor",
+      title: "Real Time Flight Search Cache Predictor",
+      description: "Build a dynamic cache for Flights for better cache utilisation and to reduce price change. Contributed in building a streaming pipeline to ingest millions of flight searches and preemptively populate cache with LookAhead, ensuring fresh, relevant pricing. Applied parametric survival models to forecast user search behavior, boosting cache utilization by 32–35% and cutting P95 latency from 4 s to <1 s. Drove ~2.2 k incremental daily bookings and over ₹1 MM in daily margin uplift through timely, data-driven cache refreshes.",
+      icon: "database",
+      metrics: [
+        { icon: "percentage", label: "32-35% cache utilization boost" },
+        { icon: "tachometer-alt", label: "4s → <1s P95 latency, ₹1MM daily uplift" }
+      ],
+      technologies: ["Survival Models", "Cache Optimization", "Streaming", "Real-time"]
+    },
+    {
+      id: "eta-prediction",
+      title: "Forecasting ETA Prediction (Trains)",
+      description: "Built an online forecasting pipeline for ~7 k trains using classical time-series models (ARIMA, Exponential Smoothing) to predict station arrival delays. Used an A/B testing framework to benchmark model performance, cutting P95 RMSE from 17 min to 9 min and MAE from 9 min to 4 min. Deployed the service for real-time inference, ensuring low-latency, high-accuracy ETA updates.",
+      icon: "train",
+      metrics: [
+        { icon: "train", label: "7K trains monitored" },
+        { icon: "chart-line", label: "P95 RMSE: 17min → 9min, MAE: 9min → 4min" }
+      ],
+      technologies: ["Time Series", "ARIMA", "Exponential Smoothing", "A/B Testing"]
     }
   ],
   
