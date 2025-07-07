@@ -35,6 +35,11 @@
   --surface-elevated: hsl(0, 0%, 98%);
   --surface-card: hsl(0, 0%, 100%);
   --text-muted: hsl(215, 16%, 47%);
+  
+  /* Better contrast for light mode */
+  --text-primary: hsl(0, 0%, 10%);
+  --text-secondary: hsl(0, 0%, 30%);
+  --text-accent: hsl(0, 0%, 50%);
 }
 
 .dark {
@@ -176,6 +181,34 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Robot animations */
+.robot-animation {
+  animation: robot-float 3s ease-in-out infinite;
+}
+
+@keyframes robot-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.pulse-eyes {
+  animation: pulse-eyes 2s ease-in-out infinite;
+}
+
+@keyframes pulse-eyes {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.pulse-antenna {
+  animation: pulse-antenna 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-antenna {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
 /* AI Gradient Text Animation */
