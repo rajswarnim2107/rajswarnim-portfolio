@@ -16,5 +16,5 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
-  base: "/raj-swarnim-portfolio/", // Replace with your actual GitHub repo name
+  base: "/rajswarnim-portfolio/", // Updated to match the actual repository name
 });
