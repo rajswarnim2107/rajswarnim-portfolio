@@ -15,7 +15,7 @@ export function Skills() {
           Skills
         </h2>
         
-        <div ref={elementRef} className="grid md:grid-cols-2 gap-12">
+        <div ref={elementRef as React.RefObject<HTMLDivElement>} className="grid md:grid-cols-2 gap-12">
           {Object.entries(resumeData.skills).map(([category, skills], index) => (
             <div key={category} className={`bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 card-hover scroll-reveal transition-colors`}>
               <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">

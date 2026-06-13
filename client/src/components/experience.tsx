@@ -11,7 +11,7 @@ export function Experience() {
         
         <div className="space-y-8">
           {resumeData.experience.map((exp, index) => (
-            <div key={exp.id} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 card-hover scroll-reveal transition-colors">
+            <div key={exp.id} className="glass-card glass-hover p-6 rounded-lg scroll-reveal transition-colors">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">

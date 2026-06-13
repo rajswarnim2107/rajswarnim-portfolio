@@ -1,8 +1,20 @@
+import { lazy, Suspense } from 'react';
 import { resumeData } from '@/data/resume-data';
 import { Button } from '@/components/ui/button';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MatrixRain } from '@/components/effects/MatrixRain';
+import { useTheme } from '@/components/theme-provider';
+
+const BackgroundScene = lazy(() =>
+  import('@/components/3d').then((module) => ({ default: module.BackgroundScene }))
+);
 
 export function Hero() {
   const { personal, specializations, stats } = resumeData;
+  const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const { theme } = useTheme();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
@@ -12,8 +24,19 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="pt-24 pb-16 bg-white dark:bg-gray-900 transition-colors">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="home" className="relative pt-24 pb-16 bg-white dark:bg-gray-900 transition-colors overflow-hidden">
+      {/* 3D Neural Network Background */}
+      {!prefersReducedMotion && (
+        <Suspense fallback={null}>
+          <BackgroundScene
+            particleCount={isMobile ? 30 : 100}
+            quality={isMobile ? 'low' : 'high'}
+            theme={theme === 'dark' ? 'dark' : 'light'}
+          />
+        </Suspense>
+      )}
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="slide-in-left">

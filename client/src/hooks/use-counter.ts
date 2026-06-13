@@ -1,10 +1,25 @@
 import { useEffect, useState } from 'react';
 
+interface UseCounterOptions {
+  duration?: number;
+  startAnimation?: boolean;
+  formatter?: (value: number) => string;
+  prefix?: string;
+  suffix?: string;
+}
+
 export function useCounter(
   target: number,
-  duration: number = 2000,
-  startAnimation: boolean = false
+  options: UseCounterOptions = {}
 ) {
+  const {
+    duration = 2000,
+    startAnimation = false,
+    formatter = (v) => v.toString(),
+    prefix = '',
+    suffix = ''
+  } = options;
+
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -17,11 +32,11 @@ export function useCounter(
       if (!startTime) startTime = currentTime;
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       // Easing function for smooth animation
       const easeOut = 1 - Math.pow(1 - progress, 3);
       const currentCount = Math.floor(easeOut * target);
-      
+
       setCount(currentCount);
 
       if (progress < 1) {
@@ -40,5 +55,5 @@ export function useCounter(
     };
   }, [target, duration, startAnimation]);
 
-  return count;
+  return `${prefix}${formatter(count)}${suffix}`;
 }

@@ -185,30 +185,30 @@
 
 /* Robot animations */
 .robot-animation {
-  animation: robot-float 3s ease-in-out infinite;
+  animation: robot-float 6s ease-in-out infinite;
 }
 
 @keyframes robot-float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(2deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
 }
 
 .pulse-eyes {
-  animation: pulse-eyes 2s ease-in-out infinite;
+  animation: pulse-eyes 3s ease-in-out infinite;
 }
 
 @keyframes pulse-eyes {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  50% { opacity: 0.7; }
 }
 
 .pulse-antenna {
-  animation: pulse-antenna 1.5s ease-in-out infinite;
+  animation: pulse-antenna 6s ease-in-out infinite;
 }
 
 @keyframes pulse-antenna {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  50% { transform: scale(1.08); }
 }
 
 /* AI Gradient Text Animation */
@@ -226,16 +226,16 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
   }
 }
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
   }
   50% {
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
   }
 }
 
@@ -295,7 +295,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-shift 3s ease infinite;
+  animation: gradient-shift 6s ease infinite;
 }
 
 .ai-gradient-text-purple {
@@ -320,7 +320,7 @@
 }
 
 .pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+  animation: pulse-glow 6s ease-in-out infinite;
 }
 
 .slide-in-left {
@@ -406,4 +406,448 @@
 .scroll-reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* GPU Acceleration */
+.gpu-accelerate {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.card-3d-container {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth 3D transformations */
+.preserve-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Glassmorphism Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-card {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.dark .glass-hover:hover {
+  background: rgba(17, 24, 39, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================================
+   CINEMATIC EXPERIENCE LAYER
+   Deep-space design system for the 3D journey.
+   ============================================================ */
+
+/* framer-motion useScroll checks that the scroll root is non-static.
+   Adding position:relative to html satisfies the check without any
+   layout side-effects (absolutely-positioned children already reference
+   the initial containing block, which is html). */
+html {
+  position: relative;
+}
+
+:root {
+  --space-bg: hsl(240, 10%, 3.9%);
+  --accent-purple: #a855f7;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #4facfe;
+  --accent-magenta: #f093fb;
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-mass: cubic-bezier(0.65, 0, 0.35, 1);
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.cinematic-root {
+  background: var(--space-bg);
+  color: hsl(0, 0%, 98%);
+  font-family: 'Inter', sans-serif;
+  /* Non-static so framer-motion useScroll offsets resolve against this
+     element instead of warning about the static body. */
+  position: relative;
+}
+
+.cinematic-root.custom-cursor-active,
+.cinematic-root.custom-cursor-active * {
+  cursor: none !important;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-hud {
+  font-family: var(--font-mono);
+  font-feature-settings: 'zero' 1;
+  letter-spacing: 0.04em;
+}
+
+/* Aurora gradient text — purple → blue → cyan → magenta, slow drift */
+.aurora-text {
+  background: linear-gradient(
+    100deg,
+    #a855f7 0%,
+    #3b82f6 30%,
+    #4facfe 55%,
+    #f093fb 80%,
+    #a855f7 100%
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aurora-drift 9s var(--ease-mass) infinite;
+}
+
+@keyframes aurora-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Deep-space glass panel — darker + thinner luminous border than .glass-card */
+.space-glass {
+  background: rgba(13, 13, 22, 0.62);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgba(168, 85, 247, 0.16);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 24px 64px rgba(0, 0, 0, 0.55);
+  border-radius: 1rem;
+}
+
+.space-glass-bright {
+  border-color: rgba(79, 172, 254, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 0 32px rgba(79, 172, 254, 0.08),
+    0 24px 64px rgba(0, 0, 0, 0.55);
+}
+
+/* Light-sweep on hover for CTAs and cards */
+.light-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-sweep::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.14) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.9s var(--ease-cinematic);
+  pointer-events: none;
+}
+
+.light-sweep:hover::after {
+  transform: translateX(120%);
+}
+
+/* HUD chip — mono-font stat badges floating in the hero */
+.hud-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(79, 172, 254, 0.25);
+  background: rgba(13, 13, 22, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  box-shadow: 0 0 18px rgba(79, 172, 254, 0.07);
+}
+
+/* ============================================================
+   HERO LEGIBILITY — text/DOM layer ONLY. The 3D network is untouched.
+   All aurora-name rules are scoped to .aurora-text[data-text] so the
+   shared .aurora-text class (TopBar logo, Contact "Build") is unaffected.
+   ============================================================ */
+
+/* Localized legibility scrim — left-anchored, masked, low-alpha. Only the
+   copy column is backed; the right ~45% and the gaps between every glyph
+   stay fully transparent so the network reads as vivid. Peak alpha is
+   moderate because the aurora floor + halos carry the contrast; the scrim
+   only seats the type in deep space. z-index:-1 sits above the fixed
+   canvas (z-0) because .station-section is its own stacking context. */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none; /* also set inline in JSX (station-section > * re-enables) */
+  background: radial-gradient(
+    120% 92% at 22% 50%,
+    rgba(8, 8, 14, 0.55) 0%,
+    rgba(8, 8, 14, 0.42) 30%,
+    rgba(8, 8, 14, 0.22) 52%,
+    rgba(8, 8, 14, 0) 72%
+  );
+  /* Feather the right edge so the scrim dissolves INTO the network,
+     never ending on a hard vertical seam on wide monitors. */
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 52%, transparent 78%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 52%, transparent 78%);
+}
+
+/* Mobile: copy is full-width/centered, so fade top->bottom and drop the
+   left-bias mask. Slightly higher alpha since type sits mid-screen. */
+@media (max-width: 1023px) {
+  .hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 8, 14, 0) 0%,
+      rgba(8, 8, 14, 0.5) 28%,
+      rgba(8, 8, 14, 0.66) 58%,
+      rgba(8, 8, 14, 0.5) 88%,
+      rgba(8, 8, 14, 0) 100%
+    );
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+/* AURORA NAME (hero h1 only — scoped via [data-text] so the shared
+   .aurora-text on the TopBar logo / Contact "Build" stays untouched).
+   The gradient fill is OPAQUE (transparent text-fill revealing an opaque
+   gradient background), so the network never shows through the letter
+   bodies — the legibility problem is colorful glyphs blending into the
+   colorful network AROUND them. Fix = a thin dark contour painted under
+   the gradient fill (paint-order: stroke fill) that crisps every edge,
+   working with the wrapper halo + scrim. Nothing here touches the 3D
+   layer, and the gradient/drift still come from the base .aurora-text. */
+.aurora-text[data-text] {
+  -webkit-text-stroke: 0.7px rgba(5, 5, 10, 0.6);
+  paint-order: stroke fill;
+}
+
+/* Dark halo + on-brand cyan glow on the parallax WRAPPER (not the h1 — its
+   filter is Framer-driven). The wrapper only animates x/y, so filter is
+   free. drop-shadow follows the painted gradient pixels (works on a
+   transparent fill where a box-shadow never would). */
+.hero-name-wrap {
+  filter:
+    drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8))
+    drop-shadow(0 0 22px rgba(79, 172, 254, 0.16));
+  will-change: filter;
+}
+
+/* Solid-fill copy (greeting / title / tagline) — multi-layer dark halo.
+   Tight inner layer kills fringe on bright nodes; wider layer seats text
+   on deep space. */
+.hero-copy-shadow {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.9),
+    0 0 14px rgba(0, 0, 0, 0.65);
+}
+
+/* Scroll progress rail (right edge) */
+.scroll-rail {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.scroll-rail-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.scroll-rail-fill {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #a855f7, #4facfe);
+  transition: height 0.15s linear;
+}
+
+.rail-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  transition: all 0.4s var(--ease-cinematic);
+}
+
+.rail-dot.active {
+  border-color: var(--accent-cyan);
+  background: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(79, 172, 254, 0.8);
+  transform: scale(1.25);
+}
+
+/* Section panel scaffolding — DOM content floats above the 3D world */
+.station-section {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  pointer-events: none; /* let empty space pass through; panels re-enable */
+  /* Own stacking context so a z-index:-1 child (.hero-scrim) reliably sits
+     ABOVE the fixed canvas (z-0) and BELOW the copy, instead of falling
+     behind the canvas. */
+  isolation: isolate;
+}
+
+.station-section > * {
+  pointer-events: auto;
+}
+
+/* Proficiency bar that draws itself when revealed */
+.skill-bar-track {
+  height: 3px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transform-origin: left;
+}
+
+/* Custom cursor dot + ring */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+  border-radius: 9999px;
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.9);
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  transition:
+    width 0.3s var(--ease-cinematic),
+    height 0.3s var(--ease-cinematic),
+    border-color 0.3s var(--ease-cinematic),
+    background-color 0.3s var(--ease-cinematic);
+}
+
+.cursor-ring.cursor-hover {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(79, 172, 254, 0.85);
+  background: rgba(79, 172, 254, 0.08);
+}
+
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Preloader */
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--space-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.preloader-line-track {
+  width: min(280px, 60vw);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.preloader-line-fill {
+  height: 100%;
+  background: linear-gradient(to right, #a855f7, #4facfe);
+  transform-origin: left;
+}
+
+/* Reduced-motion: kill every decorative animation in this layer */
+@media (prefers-reduced-motion: reduce) {
+  .aurora-text,
+  .light-sweep::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+  /* Don't needlessly promote the name wrapper when nothing animates; the
+     aurora floor, stroke, and halos are all static and persist. */
+  .hero-name-wrap {
+    will-change: auto;
+  }
 }

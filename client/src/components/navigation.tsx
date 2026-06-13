@@ -17,8 +17,8 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navigationItems.map(item => 
-        document.querySelector(item.href)
+      const sections = navigationItems.map(item =>
+        document.querySelector<HTMLElement>(item.href)
       );
       
       const scrollPosition = window.scrollY + 100;
@@ -45,7 +45,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700 transition-colors">
+    <nav className="fixed top-0 left-0 right-0 glass z-50 transition-colors shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">

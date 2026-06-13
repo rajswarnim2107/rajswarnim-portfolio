@@ -33,12 +33,16 @@ interface StatCardProps {
 }
 
 function StatCard({ value, label, suffix, startAnimation }: StatCardProps) {
-  const count = useCounter(value, 2000, startAnimation);
+  const count = useCounter(value, {
+    duration: 2000,
+    startAnimation,
+    suffix
+  });
 
   return (
     <div className="text-center group">
       <div className="text-4xl md:text-5xl font-bold text-tech-primary mb-3 group-hover:text-tech-secondary transition-colors duration-300">
-        {count}{suffix}
+        {count}
       </div>
       <div className="text-muted font-medium text-lg">{label}</div>
     </div>
